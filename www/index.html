@@ -1,0 +1,328 @@
+<!--
+Created by: Ezatullah rafie
+email: erafie9818@conestogac.on.ca
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Decentralized Platform for Artists</title>
+        <!--jquery-->
+        <script src="js/lib/jquery-2.1.4.js"></script>
+        <!--jquery mobile-->
+        <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+        <!--jquery mobile css-->
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+        <!--jquery validation lib-->
+        <script src="js/lib/jquery.validate.js"></script>
+        <script src="js/ERdpaDAL.js"></script>
+        <script src="js/ERutil.js"></script>
+        <script src="js/ERglobal.js"></script>
+        <script src="js/ERfacade.js"></script>
+        <script src="js/ERdatabase.js"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+                type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+                type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/ERmystyle.css">
+    </head>
+    <body>
+        <!--erHomePage-->
+        <div data-role="page" id="erHomePage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>DPA</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-active ui-state-persist ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2 class="center">Welcome to future</h2>
+                <p class="center">With Decentralized Platform for Artists (DPA) you can register as an artist and move your art works
+                to the world of decentralized none fungible tokens.</p>
+                <div class="center">
+                    <img src="img/nft.jpg" width="100%" alt="NFT">
+                    <a href='https://www.freepik.com/vectors/background'>Background vector created by Kerfin7 - www.freepik.com</a>
+                </div>
+                <p>Feel free to contact us if you have any trouble!</p>
+
+                <a href="#erContactUsPage" data-role="button">contact us</a>
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erContactUsPage-->
+        <div data-role="page" id="erContactUsPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Contact Us</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2 class="center">Contact Us</h2>
+                <p>Phone: </p>
+                <a href="#" data-role="button">Call: 519.748.5220</a>
+                <p>Email: </p>
+                <a href="mailto:erafie9818@conestogac.on.ca" data-role="button">
+                    erafie9818@conestogac.on.ca
+                </a>
+                <p>Website: </p>
+                <a href="https://www.conestogac.on.ca/" data-role="button" >
+                    Conestoga College
+                </a>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erAboutPage-->
+        <div data-role="page" id="erAboutPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>DPA</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-active ui-state-persist ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2 >About Us</h2>
+
+                <p >DPA is developed by Ezatullah Rafie</p>
+
+                <p >DPA is a group of young entrepreneurs who are specialized in NFT and trying to help artists
+                who are interested in expanding their fan base</p>
+
+                <p >Our company is located at 123 Street Waterloo, Ontario</p>
+                <div style="width: 100%; height: 100%" id="mapContainer"></div>
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erRegisterPage-->
+        <div data-role="page" id="erRegisterPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Register</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b"
+                               class="ui-btn-active ui-state-persist">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2>Register</h2>
+                <div>
+                    <form id="erRegisterForm" name="erRegisterForm">
+                        <label for="txtUsername">Username:</label>
+                        <input type="text" id="txtUsername" name="txtUsername" data-clear-btn="true">
+
+                        <label for="txtFullName">Full Name:</label>
+                        <input type="text" id="txtFullName" name="txtFullName" data-clear-btn="true">
+
+                        <label for="txtEmail">Email:</label>
+                        <input type="text" id="txtEmail" name="txtEmail" data-clear-btn="true">
+
+                        <label for="txtPassword">Password:</label>
+                        <input type="text" id="txtPassword" name="txtPassword" data-clear-btn="true">
+
+                        <label for="txtVerifyPassword">Verify Password:</label>
+                        <input type="text" id="txtVerifyPassword" name="txtVerifyPassword" data-clear-btn="true">
+
+                        <button type="button" data-role="button" id="btnRegister" name="btnRegister"
+                                data-theme="b">Register
+                        </button>
+                    </form>
+                </div>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erAddArtPage-->
+        <div data-role="page" id="erAddArtPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Add art</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b"
+                               class="ui-btn-active ui-state-persist">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2>Add your art</h2>
+                <div>
+                    <form id="erAddArtForm" name="erAddArtForm">
+                        <label for="txtArtName">Art Name:</label>
+                        <input type="text" id="txtArtName" name="txtArtName" data-clear-btn="true">
+
+                        <label for="txtDescription">Description:</label>
+                        <textarea id="txtDescription" name="txtDescription" data-clear-btn="true"></textarea>
+
+                        <label for="txtPrice">Price:</label>
+                        <input type="number" id="txtPrice" name="txtPrice" data-clear-btn="true">
+
+                        <p>You can simply provide a link to your art at the moment.</p>
+                        <label for="txtArtLink">Link:</label>
+                        <input type="text" id="txtArtLink" name="txtArtLink" data-clear-btn="true">
+
+                        <button type="button" data-role="button" id="btnAddArt" name="btnAddArt"
+                                data-theme="b">Add
+                        </button>
+                    </form>
+                </div>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erLoginPage-->
+        <div data-role="page" id="erLoginPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Login</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b"
+                               class="ui-btn-active ui-state-persist">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2>Login</h2>
+                <div>
+                    <form id="erLoginForm" name="erAddArtForm">
+                        <label for="txtLoginUsername">Username:</label>
+                        <input type="text" id="txtLoginUsername" name="txtLoginUsername" data-clear-btn="true">
+
+                        <label for="txtLoginPassword">Password:</label>
+                        <input type="text" id="txtLoginPassword" name="txtLoginPassword" data-clear-btn="true">
+
+                        <button type="button" data-role="button" id="btnLogin" name="btnLogin"
+                                data-theme="b">Log in
+                        </button>
+                    </form>
+                </div>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erArtistsPage-->
+        <div data-role="page" id="erArtistsPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Artists</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b"
+                               class="ui-btn-active ui-state-persist">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b">Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2>Artists</h2>
+                <div>
+                    <ul id="artistList" data-role="listview" class="ui-listview-inset">
+                    </ul>
+                </div>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+        <!--erArtsPage-->
+        <div data-role="page" id="erArtsPage" class="ui-page-theme-b">
+            <header data-role="header" data-position="fixed">
+                <h1>Arts</h1>
+                <a href="#erHomePage"  data-theme="b" class="ui-btn-left"
+                >Home</a>
+                <a href="#erAboutPage"  data-theme="b" class="ui-btn-right">About</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#erArtistsPage" data-theme="b">Artists</a></li>
+                        <li><a href="#erArtsPage" data-theme="b" class="ui-btn-active ui-state-persist"
+                        >Arts</a></li>
+                        <li><a href="#erRegisterPage"  data-theme="b">Register</a></li>
+                        <li><a href="#erLoginPage"  data-theme="b">Add art</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <h2>Arts</h2>
+                <div>
+                    <ul id="artList" data-role="listview" class="ui-listview-inset">
+                    </ul>
+                </div>
+
+            </section>
+            <footer data-role="footer" data-position="fixed" data-theme="b">
+                <h4>&copy; 2021 DPA</h4>
+            </footer>
+        </div>
+
+    </body>
+</html>
